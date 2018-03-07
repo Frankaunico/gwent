@@ -449,3 +449,20 @@ if (! function_exists('registraPostTypeTipo')) {
 
     add_action('init', 'registraPostTypeTipo');
 }
+/**
+ * @return null
+ */
+if(! function_exists('fotogwent')) {
+    function fotogwent() {
+        # Use a human-readable representation of the image size e.g '300x200', as opposed to words like 'thumb-small' or 'hero'.
+
+        # Example size 1
+        add_image_size('1200x1200-crop', 1200, 1200, array('center', 'center'));
+        add_image_size('325x325-crop', 325, 325, array('center', 'center'));
+
+        # Reduces the file size of images uploaded to the media library
+        add_filter('jpeg_quality', function() { return 70; });
+    }
+
+    add_action('after_setup_theme', 'fotogwent');
+}
