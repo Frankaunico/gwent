@@ -1,20 +1,11 @@
 /*
-Theme Name: Start WordPress
-Author: Tania Rascia
+Theme Name: Gwent
+Author: Fran Zapata & Jesús A. Loranca
 Description: Bootstrap Blog template converted to WordPress
-Version: 0.0.1
-Tags: bootstrap
+Version: 1.0.0
+Tags: gwent, bootstrap, league, zekyMurcia
 */
 
-img{
-	
-	
-	
-}
-
-.imagenpequena {
-	
-	border: 5px solid red;
-	width: 50% !important;
-	
+body {
+    margin: 0 15%;
 }
