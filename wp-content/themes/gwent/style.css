@@ -7,10 +7,26 @@ Tags: gwent, bootstrap, league, zekyMurcia
 */
 
 main {
-    margin: 0 15%;
+    margin: 5% 15%;
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+.texto-centrado {
+    text-align:center !important;
+}
+
+.perfil-jugador {
+    padding-bottom: 7.5%;
+}
+
+.margen-arriba {
+    padding-top: 5%;
+}
+
+.margen-abajo {
+    padding-bottom: 5%;
 }
