@@ -15,12 +15,29 @@ img {
     height: auto;
 }
 
+.imagen-cabecera {
+    padding-bottom: 20%;
+    background-image: url('./imagenes/playgwent.com_en_1503999839_59a537601b90a9.47593042.jpg" ?>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .texto-centrado {
     text-align:center !important;
 }
 
 .perfil-jugador {
     padding-bottom: 7.5%;
+}
+
+.redes-sociales svg {
+    font-size: 1.5em;
+    margin-top: 3%;
+    color: orange;
+}
+
+.color-texto {
+    color: orange;
 }
 
 .margen-arriba {

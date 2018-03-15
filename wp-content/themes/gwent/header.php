@@ -14,7 +14,7 @@
 
 <body>
 
-<div style="background-image: url('<?php echo home_url() . "/wp-content/themes/gwent/imagenes/playgwent.com_en_1503999839_59a537601b90a9.47593042.jpg" ?>');">
+<div class="imagen-cabecera">
      <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="#">Link</a>

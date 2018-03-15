@@ -17,15 +17,15 @@ $jugador = new Jugador($post);
             </div>
             
             <div class="col-12 texto-centrado margen-arriba">
-                <h2><?php echo  $jugador->nombreJugador();?></h1>
+                <h2><?php echo  $jugador->nombreJugador();?></h2>
             </div>
 
             <div class="col-12 texto-centrado">
-                <h3><?php echo  $jugador->Equipo();?></h2>
+                <h3 class="color-texto"><?php echo  $jugador->Equipo();?></h3>
             </div>
 
             <div class="col-12">
-                <div class="col-6 offset-3 texto-centrado">
+                <div class="col-6 offset-3 texto-centrado redes-sociales">
                     <?php  if ($youtube = $jugador->youtube()) { echo '<a title="Youtube" href="' . $youtube . '"><i class="fab fa-youtube"></i></a>'; } ?>
                     <?php  if ($twitch = $jugador->twitch()) { echo '<a title="Twitch" href="' . $twitch . '"><i class="fab fa-twitch"></i></a>'; } ?>
                     <?php  if ($twitter = $jugador->twitter()) { echo '<a title="Twitter" href="' . $twitter . '"><i class="fab fa-twitter"></i></a>'; } ?>
@@ -39,7 +39,7 @@ $jugador = new Jugador($post);
     <div class="col-12 col-md-4">
         <div class="margen-abajo">
             <h3>Carta Favorita</h3>
-            <h4><?php echo  $jugador->cartaFavorita()->nombreCarta();?></h4>
+            <h4 class="color-texto"><?php echo  $jugador->cartaFavorita()->nombreCarta();?></h4>
         </div>
 
         <?php if ($jugador->cartaFavorita()->imagenCarta()): ?>
@@ -52,7 +52,7 @@ $jugador = new Jugador($post);
     <div class="col-12 col-md-4">
         <div class="margen-abajo">
             <h3>Facción Favorita</h3>
-            <h4><?php echo  $jugador->faccionFavorita()->nombreFaccion();?></h4>
+            <h4 class="color-texto"><?php echo  $jugador->faccionFavorita()->nombreFaccion();?></h4>
         </div>
         <?php if ($jugador->faccionFavorita()->imagenFaccion()): ?>
             <div>
@@ -64,7 +64,7 @@ $jugador = new Jugador($post);
     <div class="col-12 col-md-4">
         <div class="margen-abajo">
             <h3>Lider Favorito</h3>
-            <h4><?php echo  $jugador->liderFavorito()->nombreCarta();?></h4>
+            <h4 class="color-texto"><?php echo  $jugador->liderFavorito()->nombreCarta();?></h4>
         </div>
 
         <div>
