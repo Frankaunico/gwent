@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+
 require_once('app/clases/Jugador.php');
 require_once('app/clases/Carta.php');
 require_once('app/clases/Faccion.php');
@@ -13,15 +14,21 @@ $jugador = new Jugador($post);
     <div class="col-12">
         <div class="col-12 col-md-4 offset-md-4 perfil-jugador">
             <div class="col-12">
-                <img src="<?php echo  $jugador->imagenJugador();?>">
+                <?php if ($jugador->imagenJugador()->url()): ?>
+                    <img src="<?php echo $jugador->imagenJugador();?>">
+                <?php endif; ?>
             </div>
             
             <div class="col-12 texto-centrado margen-arriba">
-                <h2><?php echo  $jugador->nombreJugador();?></h2>
+                <?php if ($nombreJugador = $jugador->nombreJugador()): ?>
+                    <h2><?php echo $nombreJugador;?></h2>
+                <?php endif; ?>
             </div>
 
             <div class="col-12 texto-centrado">
-                <h3 class="color-texto"><?php echo  $jugador->Equipo();?></h3>
+                <?php if ($equipo = $jugador->equipo()): ?>
+                    <h3 class="color-texto"><?php echo $equipo;?></h3>
+                <?php endif; ?>
             </div>
 
             <div class="col-12">
@@ -39,12 +46,14 @@ $jugador = new Jugador($post);
     <div class="col-12 col-md-4">
         <div class="margen-abajo">
             <h3>Carta Favorita</h3>
-            <h4 class="color-texto"><?php echo  $jugador->cartaFavorita()->nombreCarta();?></h4>
+            <?php if ($nombreCarta = $jugador->cartaFavorita()->nombreCarta()): ?>
+                <h4 class="color-texto"><?php echo $nombreCarta;?></h4>
+            <?php endif; ?>
         </div>
 
-        <?php if ($jugador->cartaFavorita()->imagenCarta()): ?>
+        <?php if ($imagenCarta = $jugador->cartaFavorita()->imagenCarta()): ?>
             <div>
-                <?php echo  '<img src="'. $jugador->cartaFavorita()->imagenCarta() .'" alt="Twitter" />';?>
+                <?php echo '<img src="'. $imagenCarta . '"';?>
             </div>
         <?php endif; ?>
     </div>
@@ -52,11 +61,13 @@ $jugador = new Jugador($post);
     <div class="col-12 col-md-4">
         <div class="margen-abajo">
             <h3>Facción Favorita</h3>
-            <h4 class="color-texto"><?php echo  $jugador->faccionFavorita()->nombreFaccion();?></h4>
+            <?php if ($nombreFaccion = $jugador->faccionFavorita()->nombreFaccion()): ?>
+                <h4 class="color-texto"><?php echo $nombreFaccion;?></h4>
+            <?php endif; ?>
         </div>
-        <?php if ($jugador->faccionFavorita()->imagenFaccion()): ?>
+        <?php if ($imagenFaccion = $jugador->faccionFavorita()->imagenFaccion()): ?>
             <div>
-                <?php echo  '<img src="'. $jugador->faccionFavorita()->imagenFaccion() .'" alt="Twitter" />';?>
+                <?php echo '<img src="'. $imagenFaccion . '"';?>
             </div>
         <?php endif; ?>
     </div>
@@ -64,12 +75,15 @@ $jugador = new Jugador($post);
     <div class="col-12 col-md-4">
         <div class="margen-abajo">
             <h3>Lider Favorito</h3>
-            <h4 class="color-texto"><?php echo  $jugador->liderFavorito()->nombreCarta();?></h4>
+            <?php if ($nombreCarta = $jugador->liderFavorito()->nombreCarta()): ?>
+                <h4 class="color-texto"><?php echo $nombreCarta;?></h4>
+            <?php endif; ?>
         </div>
-
-        <div>
-            <?php echo  '<img src="'. $jugador->liderFavorito()->imagenCarta() .'" alt="Twitter" />';?>
-        </div>
+        <?php if ($imagenCarta = $jugador->liderFavorito()->imagenCarta()): ?>
+            <div>
+                <?php echo '<img src="'. $imagenCarta . '"';?>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 
