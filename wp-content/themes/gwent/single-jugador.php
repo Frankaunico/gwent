@@ -53,7 +53,7 @@ $jugador = new Jugador($post);
 
         <?php if ($imagenCarta = $jugador->cartaFavorita()->imagenCarta()): ?>
             <div>
-                <?php echo '<img src="'. $imagenCarta . '"';?>
+                <?php echo '<img src="'. $imagenCarta . '">';?>
             </div>
         <?php endif; ?>
     </div>
@@ -67,7 +67,7 @@ $jugador = new Jugador($post);
         </div>
         <?php if ($imagenFaccion = $jugador->faccionFavorita()->imagenFaccion()): ?>
             <div>
-                <?php echo '<img src="'. $imagenFaccion . '"';?>
+                <?php echo '<img src="'. $imagenFaccion . '">';?>
             </div>
         <?php endif; ?>
     </div>
@@ -81,7 +81,7 @@ $jugador = new Jugador($post);
         </div>
         <?php if ($imagenCarta = $jugador->liderFavorito()->imagenCarta()): ?>
             <div>
-                <?php echo '<img src="'. $imagenCarta . '"';?>
+                <?php echo '<img src="'. $imagenCarta . '">';?>
             </div>
         <?php endif; ?>
     </div>

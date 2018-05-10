@@ -56,7 +56,7 @@ class Jugador
     public function facebook()
     {
        if ($facebook = get_field('redes_jugador', $this->wp->ID)) {
-            return $facebook[0]['facebook'];
+            return $facebook['facebook'];
         }
         return '';
     }
@@ -80,7 +80,7 @@ class Jugador
     public function instagram()
     {
        if ($instagram = get_field('redes_jugador', $this->wp->ID)) {
-            return $instagram[0]['instagram'];
+            return $instagram['instagram'];
         }
         return '';
     }
@@ -116,7 +116,7 @@ class Jugador
     public function twitch()
     {
        if ($twitch = get_field('redes_jugador', $this->wp->ID)) {
-            return $twitch[0]['twitch'];
+            return $twitch['twitch'];
         }
         return '';
     }
@@ -128,7 +128,7 @@ class Jugador
     public function twitter()
     {
 	   if ($twitter = get_field('redes_jugador', $this->wp->ID)) {
-            return $twitter[0]['twitter'];
+            return $twitter['twitter'];
         }
         return '';
     }
@@ -140,7 +140,7 @@ class Jugador
     public function youtube()
     {
        if ($youtube = get_field('redes_jugador', $this->wp->ID)) {
-            return $youtube[0]['youtube'];
+            return $youtube['youtube'];
         }
         return '';
     }
