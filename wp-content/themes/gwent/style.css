@@ -26,6 +26,10 @@ img {
     text-align:center !important;
 }
 
+.texto-regular {
+    font-weight: normal;
+}
+
 .perfil-jugador {
     padding-bottom: 7.5%;
 }
@@ -46,4 +50,10 @@ img {
 
 .margen-abajo {
     padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .imagen-carta-o-faccion img {
+        padding-bottom: 7.5%;
+    }
 }

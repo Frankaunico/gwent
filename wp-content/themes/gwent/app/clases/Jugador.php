@@ -15,7 +15,7 @@ class Jugador
 
     /**
      * Devuelve el objeto carta que es la cata favorita del jugador.
-     * @return array
+     * @return object
      */
     public function cartaFavorita()
     {
@@ -51,7 +51,7 @@ class Jugador
 
     /**
      * Devuelve de facebook del jugador.
-     * @return array
+     * @return string
      */
     public function facebook()
     {
@@ -63,19 +63,19 @@ class Jugador
 
     /**
      * Devuelve la imagen del jugador. Se le llama con $objeto->imagenJugador()
-     * @return object
+     * @return string
      */
     public function imagenJugador()
     {
         if ($imagenJugador = get_field('foto_jugador', $this->wp->ID)) {
             return $imagenJugador['url'];
         }
-        return new NullObject();
+        return '';
     }
 
     /**
      * Devuelve de instagram del jugador.
-     * @return array
+     * @return string
      */
     public function instagram()
     {
@@ -87,7 +87,7 @@ class Jugador
 
     /**
      * Devuelve el objeto carta que es el lider favorito del jugador.
-     * @return array
+     * @return object
      */
     public function liderFavorito()
     {
@@ -111,7 +111,7 @@ class Jugador
 
     /**
      * Devuelve de twitch del jugador.
-     * @return array
+     * @return string
      */
     public function twitch()
     {
@@ -123,7 +123,7 @@ class Jugador
 	
 	/**
      * Devuelve de twitter del jugador.
-     * @return array
+     * @return string
      */
     public function twitter()
     {
@@ -135,7 +135,7 @@ class Jugador
 	
     /**
      * Devuelve de youtube del jugador.
-     * @return array
+     * @return string
      */
     public function youtube()
     {

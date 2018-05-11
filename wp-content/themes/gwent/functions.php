@@ -270,34 +270,34 @@ if (! function_exists('registraPostTypeTemporada')) {
     add_action('init', 'registraPostTypeTemporada');
 }
 /**
- * Registra el post type Estadictica
+ * Registra el post type Estadistica
  */
-if (! function_exists('registraPostTypeEstadictica')) {
-    function registraPostTypeEstadictica() {
+if (! function_exists('registraPostTypeEstadistica')) {
+    function registraPostTypeEstadistica() {
         $labels = [
-            'name'           => 'Estadicticas',
-            'singular_name'  => 'Estadictica',
-            'menu_name'      => 'Estadicticas',
-            'name_admin_bar' => 'Estadicticas',
+            'name'           => 'Estadisticas',
+            'singular_name'  => 'Estadistica',
+            'menu_name'      => 'Estadisticas',
+            'name_admin_bar' => 'Estadisticas',
             'add_new'        => 'Añadir nuevo',
-            'add_new_item'   => 'Añadir nuevo Estadictica',
-            'new_item'       => 'Nuevo Estadictica',
-            'edit_item'      => 'Editar Estadictica',
-            'view_item'      => 'Ver Estadictica',
-            'all_items'      => 'Estadicticas',
-            'search_items'   => 'Buscar Estadicticas',
-            'not_found'          => 'No se han encontrado Estadicticas',
-            'not_found_in_trash' => 'No se han encontrado Estadicticas en la papelera',
+            'add_new_item'   => 'Añadir nuevo Estadistica',
+            'new_item'       => 'Nuevo Estadistica',
+            'edit_item'      => 'Editar Estadistica',
+            'view_item'      => 'Ver Estadistica',
+            'all_items'      => 'Estadisticas',
+            'search_items'   => 'Buscar Estadisticas',
+            'not_found'          => 'No se han encontrado Estadisticas',
+            'not_found_in_trash' => 'No se han encontrado Estadisticas en la papelera',
         ];
 
-        $params = \apply_filters('registraPostTypeEstadictica', [
+        $params = \apply_filters('registraPostTypeEstadistica', [
             'labels'      => $labels,
-            'description' => 'Estadicticas',
+            'description' => 'Estadisticas',
             'public'             => true,
             'publicly_queryable' => true,
             'show_ui'            => true,
             'rewrite'            => [
-                'slug'       => 'estadictica',
+                'slug'       => 'estadistica',
                 'with_front' => false
             ],
             'has_archive'        => true,
@@ -309,40 +309,40 @@ if (! function_exists('registraPostTypeEstadictica')) {
             'supports'           => ['title']
         ]);
 
-        \register_post_type('estadictica', $params);
+        \register_post_type('estadistica', $params);
     }
 
-    add_action('init', 'registraPostTypeEstadictica');
+    add_action('init', 'registraPostTypeEstadistica');
 }
 /**
- * Registra el post type color
+ * Registra el post type rareza
  */
-if (! function_exists('registraPostTypeColor')) {
-    function registraPostTypeColor() {
+if (! function_exists('registraPostTypeRareza')) {
+    function registraPostTypeRareza() {
         $labels = [
-            'name'           => 'Colores',
-            'singular_name'  => 'Color',
-            'menu_name'      => 'Colores',
-            'name_admin_bar' => 'Colores',
+            'name'           => 'Rarezas',
+            'singular_name'  => 'Rareza',
+            'menu_name'      => 'Rarezas',
+            'name_admin_bar' => 'Rarezas',
             'add_new'        => 'Añadir nuevo',
-            'add_new_item'   => 'Añadir nuevo Color',
-            'new_item'       => 'Nuevo Color',
-            'edit_item'      => 'Editar Color',
-            'view_item'      => 'Ver Color',
-            'all_items'      => 'Colores',
-            'search_items'   => 'Buscar Colores',
-            'not_found'          => 'No se han encontrado Colores',
-            'not_found_in_trash' => 'No se han encontrado Colores en la papelera',
+            'add_new_item'   => 'Añadir nuevo Rareza',
+            'new_item'       => 'Nuevo Rareza',
+            'edit_item'      => 'Editar Rareza',
+            'view_item'      => 'Ver Rareza',
+            'all_items'      => 'Rarezas',
+            'search_items'   => 'Buscar Rarezas',
+            'not_found'          => 'No se han encontrado Rarezas',
+            'not_found_in_trash' => 'No se han encontrado Rarezas en la papelera',
         ];
 
-        $params = \apply_filters('registraPostTypeColor', [
+        $params = \apply_filters('registraPostTypeRareza', [
             'labels'      => $labels,
-            'description' => 'Colores',
+            'description' => 'Rarezas',
             'public'             => true,
             'publicly_queryable' => true,
             'show_ui'            => true,
             'rewrite'            => [
-                'slug'       => 'color',
+                'slug'       => 'rareza',
                 'with_front' => false
             ],
             'has_archive'        => true,
@@ -354,10 +354,10 @@ if (! function_exists('registraPostTypeColor')) {
             'supports'           => ['title']
         ]);
 
-        \register_post_type('color', $params);
+        \register_post_type('rareza', $params);
     }
 
-    add_action('init', 'registraPostTypeColor');
+    add_action('init', 'registraPostTypeRareza');
 }
 /**
  * Registra el post type faccion
