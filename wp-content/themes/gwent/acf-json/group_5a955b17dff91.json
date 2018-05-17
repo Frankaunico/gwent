@@ -83,7 +83,7 @@
                 "id": ""
             },
             "post_type": [
-                "color"
+                "rareza"
             ],
             "taxonomy": [],
             "allow_null": 0,
@@ -104,7 +104,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
+            "post_type": [
+                "faccion"
+            ],
             "taxonomy": [],
             "allow_null": 0,
             "multiple": 0,
@@ -129,5 +131,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526039024
+    "modified": 1526556841
 }
